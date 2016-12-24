@@ -41,3 +41,10 @@ cacheSolve <- function(x, ...) {
   x$setinverse(i)
   i
 }
+
+# Test Cases:
+# m1 <- matrix(c(1,2,3,2,2,6,2,3,4), 3, 3)
+# m2 <- matrix(c(1,2,2,1,4,2,3,2,1), 3, 3)
+
+# test <- makeCacheMatrix(m1)
+# cacheSolve(test)
