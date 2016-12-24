@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The functions put a matrix into cache.  
+## when cacheSolve is called, the inverse is calculated and stored.
+## when cacheSolve is called again, the inverse is loaded from cache
 
-# Based on the template, makeVector, this function should be a list containing a function to:
+# makeCacheMatrix should be a list containing functions to:
 # set the value of the matrix
 # get the value of the matrix
 # set the value of the inverse matrix
@@ -37,7 +38,7 @@ cacheSolve <- function(x, ...) {
     return(i)
   }
   data <- x$get()
-  i <- solve(data)
+  i <- solve(data, ...)
   x$setinverse(i)
   i
 }
